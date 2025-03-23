@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://th.bing.com/th/id/OIP.7xjAWMSKcIlXhL4NdUOfywHaE8?rs=1&pid=ImgDetMainhttps://images.pexels.com/photos/1048270/pexels-photo-1048270.jpeg') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar .nav-link:hover {
+            color: #c0c0c0 !important;
+        }
+        .payment-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 80px;
+        }
+        .btn-pay {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-pay:hover {
+            background-color: #0056b3;
+        }
+        .message-box {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">Homies Style</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="Untitled-1.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="starters.html">Starters</a>
+                        <a class="dropdown-item" href="maincourse.html">Main Course</a>
+                        <a class="dropdown-item" href="desserts.html">Desserts</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookTable.html">Book Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footor">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 payment-form">
+                <h2 class="text-center mb-4">Payment</h2>
+                <h4 class="text-center mb-4">Total: $<span id="totalAmount"></span></h4> <!-- Display Total Amount -->
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select class="form-control" id="paymentMethod" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="card">Card</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+
+                    <div id="cardDetails" style="display: none;"> <!-- Card details only visible if card is selected -->
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-pay">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>
+                    <strong>Homies Style</strong><br>
+                    123 Food Street<br>
+                    Food City, FC 12345<br>
+                    <strong>Phone:</strong> (123) 456-7890<br>
+                    <strong>Email:</strong> homiesstyle@restaurant.com
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <a href="#" class="text-white mr-3">Facebook</a>
+                <a href="#" class="text-white mr-3">Twitter</a>
+                <a href="#" class="text-white">Instagram</a>
+            </div>
+            <div class="col-md-4">
+                <h5>Opening Hours</h5>
+                <p>
+                    Monday - Friday: 11:00 AM - 10:00 PM<br>
+                    Saturday - Sunday: 10:00 AM - 11:00 PM
+                </p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <p>&copy; Homies Style. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <div id="messageBox" class="message-box">
+        <p>Your payment was successful!</p>
+        <button class="btn btn-pay" onclick="closeMessageBox()">Close</button>
+    </div>
+
+    <script>
+        // Simulated cart total from localStorage or sessionStorage (for example)
+        var totalAmount = 100; // Retrieve this dynamically from the cart page
+        document.getElementById('totalAmount').textContent = totalAmount;
+
+        document.getElementById('paymentMethod').addEventListener('change', function() {
+            var selectedMethod = this.value;
+            var cardDetails = document.getElementById('cardDetails');
+            if (selectedMethod === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        });
+
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var paymentMethod = document.getElementById('paymentMethod').value;
+
+            if (paymentMethod === 'card') {
+                // Here you can handle the card payment process
+                alert('Processing card payment...');
+            } else if (paymentMethod === 'cash') {
+                // Handle cash payment logic
+                alert('Cash payment selected.');
+            }
+
+            // Show the message box
+            document.getElementById('messageBox').style.display = 'block';
+        });
+
+        function closeMessageBox() {
+            document.getElementById('messageBox').style.display = 'none';
+            // Optionally, redirect to another page or clear form
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

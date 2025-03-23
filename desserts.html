@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts Menu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for the whole page */
+        }
+        .navbar {
+            background-color: #343a40; /* Dark background for the navbar */
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar .nav-link:hover {
+            color: #c0c0c0 !important;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item .card-body {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        #desserts {
+            background: url('https://img.pikbest.com/backgrounds/20180607/gourmet-western-style-steak-simple-poster-background_1908900.jpg!bw340') no-repeat center center;
+            background-size: cover;
+            padding: 60px 0;
+        }
+        .card-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">Homies Style</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="Untitled-1.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="starters.html">Starters</a>
+                        <a class="dropdown-item" href="maincourse.html">Main Course</a>
+                        <a class="dropdown-item" href="desserts.html">Desserts</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookTable.html">Book Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footor">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <section id="desserts" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #ffffff;">Desserts Menu</h2>
+            <div class="row">
+                <!-- Dessert Item 1 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/R.7c112aafcd4b4fe7a81f6f320b533bd8?rik=Y%2feTBIQ72B7oew&riu=http%3a%2f%2fsmokymountains.com%2fwp-content%2fuploads%2f2013%2f12%2fDepositphotos_23531969_original.jpg&ehk=JTiR40%2fPd731sYzdkJhUtb%2bp4U1Rbhxu8s92QS0ecjs%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Dessert 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert 1</h5>
+                            <p class="card-text">A delicious and sweet treat to end your meal.</p>
+                            <p class="card-price">$4.99</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Dessert 1', 4.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dessert Item 2 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/OIP.ppPl8eT7O0OIT9jpO--zLAAAAA?rs=1&pid=ImgDetMain" class="card-img-top" alt="Dessert 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert 2</h5>
+                            <p class="card-text">A rich and creamy dessert to satisfy your sweet tooth.</p>
+                            <p class="card-price">$5.49</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Dessert 2', 5.49)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dessert Item 3 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/OIP.doeSXtdCdU5koAm0salOWwAAAA?rs=1&pid=ImgDetMain" class="card-img-top" alt="Dessert 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert 3</h5>
+                            <p class="card-text">A delectable dessert made with the finest ingredients.</p>
+                            <p class="card-price">$6.25</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Dessert 3', 6.25)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dessert Item 4 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/R.53bea2faa37341c316edbe0963c8ba6b?rik=nXgpB07zdcTsQA&riu=http%3a%2f%2fwww.afarmgirlsdabbles.com%2fwp-content%2fuploads%2f2016%2f06%2fLayered-Chocolate-Pudding-Dessert-with-Salted-Pecan-Crust_AFarmgirlsDabbles_AFD-5-square2.jpg&ehk=G5DrgIbUR552giK5IRsZ590RTbScI314R7Saue8B7do%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Dessert 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert 4</h5>
+                            <p class="card-text">An exquisite dessert perfect for any occasion.</p>
+                            <p class="card-price">$5.99</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Dessert 4', 5.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dessert Item 5 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/OIP.q3aOG6po_pVoL2gTpjURYwHaLH?rs=1&pid=ImgDetMain" class="card-img-top" alt="Dessert 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Dessert 5</h5>
+                            <p class="card-text">A traditional dessert with a modern twist.</p>
+                            <p class="card-price">$7.00</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Dessert 5', 7.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+<section id="footor" class="py-6 position-relative">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Contact Us</h5>
+                    <p class="text-center">
+                        <strong>Homies Style</strong><br>
+                        123 Food Street<br>
+                        Food City, FC 12345<br>
+                        <strong>Phone:</strong> (123) 456-7890<br>
+                        <strong>Email:</strong> homiesstyle@restaurant.com
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Follow Us</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Opening Hours</h5>
+                    <p class="text-center">
+                        Monday - Friday: 11:00 AM - 10:00 PM<br>
+                        Saturday - Sunday: 10:00 AM - 11:00 PM
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy;  Homies Style. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize cart if not already present
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+    
+        function addToCart(itemName, price) {
+            // Retrieve the current cart from local storage
+            const cart = JSON.parse(localStorage.getItem('cart'));
+    
+            // Add the new item to the cart
+            cart.push({ name: itemName, price: price });
+    
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Notify the user
+            alert(itemName + ' has been added to your cart at $' + price.toFixed(2));
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

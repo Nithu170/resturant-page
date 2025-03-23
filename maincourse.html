@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Course Menu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for the whole page */
+        }
+        .navbar {
+            background-color: #343a40; /* Dark background for the navbar */
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar .nav-link:hover {
+            color: #c0c0c0 !important;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px; /* Increased margin between items */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item .card-body {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        #main-course {
+            background: url('https://img.pikbest.com/backgrounds/20180607/gourmet-western-style-steak-simple-poster-background_1908900.jpg!bw340') no-repeat center center;
+            background-size: cover;
+            padding: 60px 0;
+        }
+        .container {
+            padding: 0 15px; /* Added padding for space around the content */
+        }
+        .card-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">Homies Style</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="Untitled-1.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="starters.html">Starters</a>
+                        <a class="dropdown-item" href="maincourse.html">Main Course</a>
+                        <a class="dropdown-item" href="desserts.html">Desserts</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookTable.html">Book Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footor">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+    <section id="main-course" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #ffffff;">Main Course Menu</h2>
+            <div class="row">
+                <!-- Main Course Item 1 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/11/25/0/FNK_pan-seared-salmon-with-kale-apple-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1387918756116.jpeg" class="card-img-top" alt="Main Course 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course 1</h5>
+                            <p class="card-text">A hearty dish with rich flavors and fresh ingredients.</p>
+                            <p class="card-price">$12.99</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Main Course 1', 12.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Course Item 2 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1944&h=972&url=https:%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F04%2F27%2F6540467-2000.jpg" class="card-img-top" alt="Main Course 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course 2</h5>
+                            <p class="card-text">A flavorful blend of spices and textures in this dish.</p>
+                            <p class="card-price">$14.49</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Main Course 2', 14.49)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Course Item 3 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,w_1460/https://storage.googleapis.com/gen-atmedia/3/2018/04/2517d64ca59d2aac4ae1f14918be7f3b237dd19c.jpeg" class="card-img-top" alt="Main Course 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course 3</h5>
+                            <p class="card-text">A classic dish with a modern twist, perfect for any occasion.</p>
+                            <p class="card-price">$11.75</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Main Course 3', 11.75)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Course Item 4 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/R.6c3dc8015556b548abbbc4d2a2878b8c?rik=%2fC3hDLdOBXX03g&riu=http%3a%2f%2fstatic1.squarespace.com%2fstatic%2f612d4825ee7c3b7ba3e215b7%2f612dd348b9b7172b22f7e59d%2f61b43878d005f33f5c62fdac%2f1639202211468%2fshutterstock_529611388.png%3fformat%3d1500w&ehk=xZV4fgI1ZWny2frUlcbOsBZmjucIbBi3XHRN4ZKdGek%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Main Course 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course 4</h5>
+                            <p class="card-text">Rich and savory, this main course is sure to satisfy.</p>
+                            <p class="card-price">$13.99</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Main Course 4', 13.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Course Item 5 -->
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://th.bing.com/th/id/OIP.c4msf14TJiA-NmibumatsgHaDt?rs=1&pid=ImgDetMain" class="card-img-top" alt="Main Course 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Main Course 5</h5>
+                            <p class="card-text">A delightful combination of flavors and textures.</p>
+                            <p class="card-price">$15.49</p>
+                            <button class="btn btn-add-to-cart" onclick="addToCart('Main Course 5', 15.49)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer Section -->
+<section id="footor" class="py-6 position-relative">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Contact Us</h5>
+                    <p class="text-center">
+                        <strong>Homies Style</strong><br>
+                        123 Food Street<br>
+                        Food City, FC 12345<br>
+                        <strong>Phone:</strong> (123) 456-7890<br>
+                        <strong>Email:</strong> homiesstyle@restaurant.com
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Follow Us</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Opening Hours</h5>
+                    <p class="text-center">
+                        Monday - Friday: 11:00 AM - 10:00 PM<br>
+                        Saturday - Sunday: 10:00 AM - 11:00 PM
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy;  Homies Style. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Initialize cart if not already present
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+    
+        function addToCart(itemName, price) {
+            // Retrieve the current cart from local storage
+            const cart = JSON.parse(localStorage.getItem('cart'));
+    
+            // Add the new item to the cart
+            cart.push({ name: itemName, price: price });
+    
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Notify the user
+            alert(itemName + ' has been added to your cart at $' + price.toFixed(2));
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

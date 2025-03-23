@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .background {
+            background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .book-table-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: whitesmoke;
+            max-width: 400px;
+        }
+        .book-table-container h2 {
+            margin-bottom: 20px;
+        }
+        .book-table-container .btn {
+            margin-top: 10px;
+            width: 100%;
+        }
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            color: #fff;
+            border-radius: 8px;
+            display: none;
+        }
+        .navbar {
+            background-color: #343a40; /* Dark background for the navbar */
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar .nav-link:hover {
+            color: #c0c0c0 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">Homies Style</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="Untitled-1.html">Home</a></li>
+                <li class="nav-item dropdown"></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="starters.html">Starters</a>
+                        <a class="dropdown-item" href="maincourse.html">Main Course</a>
+                        <a class="dropdown-item" href="desserts.html">Desserts</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookTable.html">Book Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footor">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+
+<div class="background">
+    <div class="book-table-container">
+        <h2>Book a Table</h2>
+        <form id="bookTableForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" class="form-control" placeholder="Number of Guests" min="1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Table</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Message Box for Confirmation -->
+<div id="confirmationMessage" class="message-box">
+    <h4>Table Booked Successfully!</h4>
+    <p>We have reserved your seat.</p>
+</div>
+
+<!-- Footer Section -->
+<section id="footor" class="py-6 position-relative">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Contact Us</h5>
+                    <p class="text-center">
+                        <strong>Homies Style</strong><br>
+                        123 Food Street<br>
+                        Food City, FC 12345<br>
+                        <strong>Phone:</strong> (123) 456-7890<br>
+                        <strong>Email:</strong> homiesstyle@restaurant.com
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Follow Us</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-center">Opening Hours</h5>
+                    <p class="text-center">
+                        Monday - Friday: 11:00 AM - 10:00 PM<br>
+                        Saturday - Sunday: 10:00 AM - 11:00 PM
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; Homies Style. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+<script>
+    document.getElementById('bookTableForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Show confirmation message
+        document.getElementById('confirmationMessage').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+    });
+</script>
+
+</body>
+</html>
